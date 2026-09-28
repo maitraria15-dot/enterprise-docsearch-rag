@@ -1,0 +1,4 @@
+.env
+lc-academy-env/
+__pycache__/
+.DS_Store

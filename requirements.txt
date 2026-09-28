@@ -3,3 +3,11 @@ langchain-core
 ipykernel
 notebook
 langchain-google-genai
+langchain-tavily
+langgraph-prebuilt
+langsmith
+langgraph-cli[inmem]
+streamlit
+langchain
+python-dotenv
+faiss-cpu
