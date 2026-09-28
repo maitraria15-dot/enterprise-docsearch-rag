@@ -4,7 +4,7 @@ A production-grade, event-driven Retrieval-Augmented Generation (RAG) agent buil
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This repository provides an enterprise-ready AI Agent architecture for document retrieval and knowledge base updates. Unlike flat scripts or standard LLM chains, this system uses **LangGraph** to manage stateful tool routing, dynamic in-memory vector store indexing, and automated evaluation.
 
@@ -17,7 +17,7 @@ This repository provides an enterprise-ready AI Agent architecture for document 
 
 ---
 
-## 🏗️ Repository Architecture
+## Repository Architecture
 
 The project follows the standard enterprise Python packaging layout (`src/` structure) to prevent import shadowing and maintain clean separation of concerns:
 
@@ -56,7 +56,7 @@ enterprise-docsearch-rag/
 
 ````
 
-## ⚙️ Core Agent Workflow
+## Core Agent Workflow
 
 The agent operates as a stateful loop managed by LangGraph:
 
@@ -87,7 +87,7 @@ Plaintext
 3. **Traffic Control (`tools_condition`):** Routes execution to **Tools Node** if a function call is needed; otherwise routes to **`END`**.
 4. **Tools Node:** Executes `@tool` functions (e.g., querying FAISS or adding documents), appends `ToolMessage` back to the state, and routes back to the LLM Node.
 
-## 🚀 Quickstart Guide
+## Quickstart Guide
 
 ### 1. Prerequisites
 
@@ -124,7 +124,7 @@ FAISS_INDEX_PATH="faiss_index"
 
 ```
 
-## 🧪 Testing & Evaluation
+## Testing & Evaluation
 
 Run the automated evaluation suite to benchmark tool routing accuracy, response accuracy, and request latency:
 
@@ -148,7 +148,7 @@ LANGCHAIN_PROJECT="enterprise-rag-agent"
 
 ```
 
-## 📦 Tech Stack
+## Tech Stack
 
 - **Orchestration:** LangGraph / LangChain
 - **LLM Engine:** Google Gemini (`gemini-2.5-flash`)
