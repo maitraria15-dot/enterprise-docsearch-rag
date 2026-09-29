@@ -11,10 +11,10 @@ from enterprise_rag.tools.knowledge_tools import tools
 
 llm = ChatGoogleGenerativeAI(
     model = settings.LLM_MODEL_NAME,
-    goole_api_key = settings.GEMINI_API_KEY,
+    goole_api_key = settings.GOOGLE_API_KEY,
     temperature = 0
 )
-model_with_tools = llm.bin_tools(tools)
+model_with_tools = llm.bind_tools(tools)
 
 SYSTEM_PROMPT = (
     "You are an enterprise document QA assistant."
